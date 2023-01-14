@@ -1,0 +1,2059 @@
+/**------Variables------**/
+:root{
+    --color-menu: #0a192d;
+    --color-font-primary: #02172d;
+    --color-font-card: #022441;
+    --color-fondo-login: #000000;
+    --color-text-login: #2df9bf;
+    --color-text-primary: #2df9bf;
+    --color-text-secondary: #ffffffde;
+    --color-text-tertiary: #ffffffb1;
+    --color-text-quaternary: #ffffff80;
+    --color-text-quintenary: #ffffff4d;
+    --color-sub-title-habilidades-adicionales: #0000ff;
+    --color-text-menu: #2dffc3;
+    --color-border-menu: #00ffff95;
+    --color-text-select: #808080;
+    --tipo-letra-bold: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --tipo-letra-modal-add-edit: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --porcentaje: 0%;
+    --color-theme-claro-active: var(--color-font-primary);
+    --color-theme-intermedio-active: var(--color-font-primary);
+    --color-theme-oscuro-active: var(--color-font-primary);
+    --color-theme-claro-hover-active: #00b900;
+    --color-theme-intermedio-hover-active: #00ffff;
+    --color-theme-oscuro-hover-active: #2df9bf;
+}
+/**---------------------**/
+
+/**------General------**/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-text-primary);
+    letter-spacing: 1.4px;
+}
+body{
+    background: var(--color-font-primary);
+}
+a{
+    text-decoration: none;
+}
+#presentacion, #descripcion, #educacion, .section-educacion, #experiencia-laboral, .section-experiencia, #habilidades, #habilidades-adicionales, #proyectos, .section-pasatiempo, #pasatiempos, #redes-sociales{
+    width: 96%;
+}
+textarea{
+    min-height: 140px;
+    max-height: 140px;
+    resize:none;
+}
+textarea::-webkit-scrollbar{
+    width: 7px;
+}
+textarea::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.btn:hover{
+    box-shadow: 0 1px 20px 15px var(--color-font-card);
+    font-family: var(--tipo-letra-bold);
+    color: var(--color-text-primary);
+}
+.header{
+    height: 45px;
+    padding: 0px 15px;
+}
+.header .btn-cerrar{
+    background-color: var(--color-text-primary);
+    color: var(--color-font-primary);
+    border: 1px;
+    border-radius: 10%;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+.header .btn-cerrar:hover{
+    box-shadow: 0 0 10px 7px var(--color-font-card);
+    font-family: var(--tipo-letra-bold);
+}
+.login form a, #add-educacion form button, #edit-presentacion form button, #add-detalle form button, #add-experiencia-laboral form button, #add-habilidad-tecnica form button, #add-habilidad-adicional form button, #add-proyecto form button, #add-tecnologia form button, #add-red-social form button, #add-pasatiempo form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+@media (max-width : 600px){
+    .header .btn-cerrar{
+        background: transparent;
+        color:var(--color-text-primary);
+    }
+}
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+@media (min-width : 500px){
+    body::-webkit-scrollbar{
+        width: 7px;
+    }
+    body::-webkit-scrollbar-thumb{
+        background: var(--color-text-primary);
+        border-radius: 30px;
+    }
+}
+/**-------------------**/
+
+/**------------Selected icons-------------**/
+.select_icon{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-sub-title-habilidades-adicionales);
+    border-radius: 7px;
+    display: flex;
+    gap: 5px;
+}
+.select_icon button{
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-sub-title-habilidades-adicionales);
+    border-radius: 7px;
+    padding: 10px 10px;
+    outline: none;
+    width: 70%;
+}
+.select_icon button:hover{
+    cursor: pointer;
+    color: var(--color-sub-title-habilidades-adicionales);
+    background-color: var(--color-text-primary);
+}
+.select_icon .icon-selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-sub-title-habilidades-adicionales);
+    border-radius: 6px;
+    padding: 5px 10px;
+    width: 30%;
+}
+/**--------------------------------------**/
+
+/**----------Modal ver iconos------------**/
+.pagina-view-icons ion-icon{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+}
+.pagina-view-icons img{
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+}
+.pagina-view-icons svg{
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+}
+.pagina-view-icons i{
+    padding: 4px;
+}
+.pagina-view-icons i:hover{
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 1px var(--color-text-primary);
+}
+.pagina-view-icons svg:hover, .pagina-view-icons ion-icon:hover, .pagina-view-icons img:hover{
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 1px var(--color-text-primary);
+}
+.lista-icons{
+    overflow-y: scroll;
+    height: 350px;
+    scrollbar-color: var(--color-text-primary);
+}
+.lista-icons::-webkit-scrollbar{
+    width: 7px;
+}
+.lista-icons::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.items-icons{
+    padding: 2px 5px 2px 2px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+/**--------------------------------------**/
+
+/**-------Calendar de edicion general-------**/
+.calendar input::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.info-calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-fecha{
+    width: 50%;
+    text-align: start;
+    padding: 5px 0px 5px 13px;
+    color: var(--color-text-select);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.calendar{
+    width: 50%;
+    padding: 5px 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.calendar:hover{
+    box-shadow: 0 0 3px 1px var(--color-sub-title-habilidades-adicionales);
+}
+.calendar input{
+    color: var(--color-text-select);
+    text-align: center;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+.calendar input:hover{
+    cursor: pointer;
+}
+@media (max-width : 360px){
+    .name-fecha{
+        width: 45%;
+        text-align: start;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .calendar{
+        padding-right: 5px;
+        width: 55%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+@media (max-width : 330px){
+    .info-calendar{
+        display: block;
+    }
+    .name-fecha{
+        width: 100%;
+        text-align: start;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+    }
+    .calendar{
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+/**-----------------------------------------**/
+
+/**-----------Slider de porcentaje----------**/
+input[type=range] {
+    height: 5px;
+    width: 100%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    background: var(--color-text-primary);
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 25px;
+    width: 13px;
+    margin-top: -8px;
+    background: #000000;
+    border: 2px solid var(--color-text-primary);
+}
+/**-----------------------------------------**/
+
+/**-------Encabezado de edicion general-------**/
+.select-edit{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-font-primary);
+    border:none;
+}
+.select-edit ion-icon{
+    width: 35px;
+    height: 35px;
+    color: var(--color-text-primary);
+    border-radius: 5px;
+}
+.select-edit ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px var(--color-text-primary);
+}
+.select-edit h4{
+    padding-top: 9px;
+    width: 100%;
+    text-align: end;
+}
+@media (max-width : 400px){
+    .select-edit ion-icon{
+        width: 30px;
+        height: 30px;
+    }
+}
+/**-------------------------------------------**/
+
+/**----------Modal de edicion y agregar general----------**/
+.modal-add-edit{
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px;
+}
+@media (max-height : 565px){
+    .modal-add-edit{
+        margin-top: -15px;
+    }
+}
+/**------------------------------------------------------**/
+
+/**-----------Iconos de edicion y eliminacion------------**/
+.subicon-edit{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-radius: 20px;
+    background-color: var(--color-font-card);
+    margin-right: 10px;
+}
+.subicon-edit ion-icon{
+    width: 30px;
+    height: 30px;
+    margin: 20px 0px;
+    border-radius: 3px;
+    color: var(--color-text-primary);
+}
+.subicon-edit ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 3px var(--color-text-primary);
+}
+@media (max-width : 400px){
+    .subicon-edit ion-icon{
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-width : 770px){
+    .subicon-edit{
+        display: flex;
+        flex-flow: row;
+        width: 97%;
+        margin: 30px auto 0px auto;
+    }
+    .subicon-edit ion-icon{
+        margin: 5px 20px;
+    }
+}
+/**------------------------------------------------------**/
+
+/**-------Login-------**/
+#login-theme{
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    margin-top: 10px;
+    margin-bottom: -40px;
+}
+#login-theme ion-icon{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 0.1px solid var(--color-text-login);
+}
+.login{
+    max-width: 410px;
+    margin: 100px 0px;
+    border-radius: 10px;
+    padding: 20px 0px;
+    background: var(--color-fondo-login);
+    box-shadow: 0 1px 25px 10px var(--color-text-login);
+}
+.icon-login{
+    width: 30px;
+    height: 30px;
+}
+.login h2{
+    margin-bottom: 30px;
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 4px;
+    color: var(--color-text-login);
+}
+.login .header-login{
+    display: flex;
+    padding: 0px;
+}
+.login .header-login .icon-login{
+    text-align: start;
+    color: var(--color-text-login);
+}
+.login .header-login .icon-login:hover{
+    cursor: pointer;
+    color: var(--color-sub-title-habilidades-adicionales);
+}
+.login .header-login .btn-cerrar-login{
+    width: 100%;
+    text-align: end;
+}
+.login .header-login .btn-cerrar-login ion-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: -10px;
+    color: var(--color-text-login);
+}
+.login .header-login .btn-cerrar-login:hover{
+    cursor: default;
+}
+.login form a{
+    padding: 6px;
+    border: 1px solid var(--color-text-login);
+    color: var(--color-text-login);
+    background-color: var(--color-fondo-login);
+}
+.login form a:hover{
+    cursor: pointer;
+    color: var(--color-fondo-login);
+    background-color: var(--color-text-login);
+}
+@media (max-width : 600px){
+    .login{
+        margin: 100px auto;
+        width: 80%;
+        box-shadow: 0 1px 30px 5px var(--color-text-login);
+    }
+    .icon-login{
+        width: 26px;
+        height: 26px;
+    }
+}
+@media (max-width : 400px){
+    .login{
+        width: 91%;
+        box-shadow: 0 0 10px 5px var(--color-text-login);
+    }
+}
+@media (max-width : 375px){
+    .login h2{
+        letter-spacing: 0px;
+    }
+}
+/**-------------------**/
+
+/**------Nav------**/
+#items{
+    padding: 57px 3px 0px 10px;
+}
+#items .item:hover{
+    cursor: pointer;
+    color: var(--color-text-menu);
+    transform: translateX(-4px);
+    box-shadow: 0px 0px 40px 0px var(--color-text-menu);
+}
+.item{
+    display: flex;
+    border: 1px solid var(--color-border-menu);
+    border-radius: 30px;
+}
+#items li{
+    margin-bottom: 18px;
+}
+.name-item{
+    width: 90%;
+}
+.logo-item{
+    width: 10%;
+}
+.logo-item ion-icon{
+    width: 30px;
+    height: 30px;
+    margin-bottom: -12px;
+    margin-right: -15px;
+}
+.footer-menu{
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    margin: 0px auto;
+    width: 100%;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    background-color: var(--color-font-card);
+}
+.header-menu{
+    position: fixed;
+    top: 0px;
+    padding: 7px;
+    margin: auto;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 3.7px;
+    background-color: var(--color-font-card);
+}
+.btn-menu{
+    position: fixed;
+    top: 3px;
+    right: 2%;
+    cursor: pointer;
+}
+.btn-menu:hover{
+    cursor: pointer;
+    color: var(--color-border-menu);
+}
+.menu-navegacion{
+    position: fixed;
+    top: 0px;
+    width: 30vw;
+    height: 100%;
+    background: var(--color-menu);
+    right: 0;
+    transform: translateX(110%);
+    transition:transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    border-left: 1px solid var(--color-border-menu);
+}
+.spread{
+    transform: translateX(0);
+}
+#inicio #logo-menu{
+    width: 45px;
+    height: 45px;
+}
+#inicio #logo-menu:hover{
+    cursor: pointer;
+    border: 0.5px solid var(--color-text-primary);
+    box-shadow: 0px 0px 20px 0px var(--color-text-primary);
+}
+#inicio{
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    padding: 5px 2%; 
+    box-shadow: 0 0 30px 0px var(--color-text-primary);
+}
+@media (max-width : 1200px) or (max-height : 515px) or (max-height : 475px) or (max-height : 445px) or (max-height : 410px) or (max-height : 370px) or (max-height : 336px) or (max-height : 296px){
+    .name-item, .footer-menu, .header-menu{
+        display: none;
+    }
+    .menu-navegacion, .item{
+        border: none;
+    }
+    .menu-navegacion{
+        width: auto;
+    }
+    .logo-item{
+        text-align: center;
+        width: 100%;
+    }
+    #items li{
+        padding: 5px 0px;
+    }
+    #items{
+        padding: 27px 3px 0px 10px;
+    }
+    .logo-item ion-icon{
+        margin-right: 0px;
+    }
+}
+@media (max-height : 515px){
+    #items .item{
+        margin-top: -5px;
+    }
+}
+@media (max-height : 445px){
+    #items .item{
+        margin-top: -10px;
+    }
+}
+@media (max-height : 410px){
+    #items .item{
+        margin-top: -15px;
+    }
+}
+@media (max-height : 370px){
+    #items .item{
+        margin-top: -20px;
+    }
+}
+@media (max-height : 336px){
+    #items .item{
+        margin-top: -25px;
+    }
+}
+@media (max-height : 296px){
+    #items .item{
+        margin-top: -30px;
+    }
+}
+@media (max-width : 400px){
+    .btn-menu{
+        top: 0px;
+        right: 2.5%;
+    }
+    #inicio #logo-menu{
+        width: 37px;
+        height: 37px;
+    }
+}
+/**---------------**/
+
+/**------Presentacion------**/
+#saludo, #nombre, #profesion{
+    font-family: var(--tipo-letra-bold);
+}
+#nombre{
+    color: var(--color-text-secondary);
+    font-size: 80px;
+}
+#profesion{
+    color: var(--color-text-tertiary);
+    font-size: 60px;
+}
+#nombre:hover{
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+#profesion:hover{
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+#info{
+    max-width: 90%;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--color-text-quintenary);
+}
+#info:hover{
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    color: var(--color-text-primary);
+}
+#perfil img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 50px 30px var(--color-menu);
+}
+#perfil img:hover {
+    position: relative;
+    cursor: pointer;
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    filter: grayscale(50%);
+}
+#descripcion p, #descripcion li{
+    color: var(--color-text-quaternary);
+}
+#sobre-mi{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+#direccion{
+    transition-duration: 1s;
+}
+#direccion:hover{
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transform: translateX(-5px);
+}
+.tecnologias-actuales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista-start, .lista-end{
+    width: 50%;
+}
+#descripcion li{
+    list-style: none;
+    margin-bottom: 5px;
+    transition: 2s;
+}
+#descripcion li::before {
+	content: "► ";  
+    color: var(--color-text-primary);
+}
+#descripcion li:hover{
+    cursor: pointer;
+    color: var(--color-text-primary);
+    transform: translateX(9px);
+}
+@media (max-width : 1200px){
+    #nombre{
+        font-size: 66px;
+    }
+    #profesion{
+        font-size: 46px;
+    }
+}
+@media (max-width : 975px){
+    #nombre{
+        font-size: 56px;
+    }
+    #profesion{
+        font-size: 36px;
+    }
+}
+@media (max-width : 845px){
+    #nombre{
+        font-size: 46px;
+    }
+    #profesion{
+        font-size: 38px;
+    }
+}
+@media (max-width : 745px){
+    #nombre{
+        font-size: 36px;
+    }
+    #profesion{
+        font-size: 33px;
+    }
+}
+@media (max-width : 574px){
+    #nombre{
+        font-size: 26px;
+    }
+    #profesion{
+        font-size: 23px;
+    }
+}
+@media (max-width : 450px){
+    #saludo{
+        font-size: 20px;
+    }
+    #nombre, #profesion{
+        color: var(--color-text-secondary);
+        font-size: 21px;
+    }
+    #info{
+        max-width: 100%;
+        font-size: 17px;
+        color: var(--color-text-quintenary);
+    }
+    #perfil img{
+        width: 300px;
+        height: 300px;
+    }
+    #descripcion{
+        width: 100%;
+    }
+    #presentacion{
+        width: 100%;
+    }
+    #presentacion, #descripcion, #educacion, .section-educacion, #experiencia-laboral, .section-experiencia, #habilidades, #habilidades-adicionales, #proyectos{
+        width: 100%;
+    }
+}
+@media (max-width : 360px){
+    #saludo{
+        font-size: 16px;
+    }
+    #nombre, #profesion{
+        color: var(--color-text-secondary);
+        font-size: 19px;
+    }
+    #info{
+        max-width: 100%;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--color-text-quintenary);
+    }
+    #info:hover{
+        letter-spacing: 4px;
+    }
+    #perfil img{
+        width: 275px;
+        height: 275px;
+    }
+}
+@media (max-width : 333px){
+    #nombre, #profesion{
+        font-size: 18px;
+    }
+}
+@media (max-width : 320px){
+    #perfil img{
+        width: 240px;
+        height: 240px;
+    }
+}
+@media (max-width : 300px){
+    #perfil img{
+        width: 230px;
+        height: 230px;
+    }
+}
+/**--------Edicion presentacion---------**/
+#edit-presentacion h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+.lista-presentacion{
+    overflow-y: scroll;
+    height: 350px;
+    scrollbar-color: var(--color-text-primary);
+}
+.lista-presentacion::-webkit-scrollbar{
+    width: 7px;
+}
+.lista-presentacion::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.items-presentacion{
+    padding-right: 5px;
+    height: auto;
+}
+#edit-presentacion ion-icon{
+    color: var(--color-text-primary);
+}
+/**------------------------**/
+
+/**------Educacion------**/
+#educacion h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+.section-educacion article, .section-educacion article p{
+    color: var(--color-text-quaternary);
+}
+.img-educacion{
+    width: 205px;
+    height: 205px;
+}
+.section-educacion{
+    transition-duration: 1.3s;
+}
+.section-educacion article{
+    padding-top: 9px;
+    border-bottom: 1px solid var(--color-text-primary);
+    border-top: 1px solid var(--color-text-primary);
+    transition-duration: 2s;
+}
+.section-educacion:hover article{
+    transform: translateY(-10px);
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 0 10px 1px var(--color-text-primary);
+}
+.data-educacion{
+    display: flex;
+}
+.logo-educacion{
+    width: 30%;
+}
+.info-educacion{
+    width: 70%;
+}
+@media (max-width : 992px){
+    .logo-educacion{
+        width: 40%;
+    }
+    .info-educacion{
+        width: 60%;
+    }
+}
+@media (max-width : 768px){
+    .data-educacion{
+        display: block;
+    }
+    .logo-educacion,.info-educacion{
+        width: auto;
+    }
+    .img-educacion{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width : 450px){
+    .img-educacion{
+        width: 205px;
+        height: 200px;
+    }
+}
+/**--------Edicion educacion---------**/
+#add-educacion h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+/**----------------------------------**/
+
+/**------Experiencia laboral------**/
+#experiencia-laboral h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+.section-experiencia article, .section-experiencia article p{
+    color: var(--color-text-quaternary);
+}
+.img-experiencia{
+    width: 205px;
+    height: 205px;
+}
+.section-experiencia{
+    transition-duration: 1.3s;
+}
+.section-experiencia article{
+    padding-top: 9px;
+    border-bottom: 1px solid var(--color-text-primary);
+    border-top: 1px solid var(--color-text-primary);
+}
+.section-experiencia:hover article{
+    transform: translateY(-10px);
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 0 10px 1px var(--color-text-primary);
+}
+.data-experiencia{
+    display: flex;
+}
+.logo-experiencia{
+    width: 30%;
+}
+.info-experiencia{
+    width: 70%;
+}
+@media (max-width : 992px){
+    .logo-experiencia{
+        width: 40%;
+    }
+    .info-experiencia{
+        width: 60%;
+    }
+}
+@media (max-width : 768px){
+    .data-experiencia{
+        display: block;
+    }
+    .logo-experiencia,.info-experiencia{
+        width: auto;
+    }
+    .img-experiencia{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width : 450px){
+    .img-experiencia{
+        width: 205px;
+        height: 200px;
+    }
+}
+/**-------------------------------**/
+/**--------Edicion experiencia laboral--------**/
+#add-experiencia-laboral h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-experiencia-laboral ion-icon{
+    color: var(--color-text-primary);
+}
+/**-------------------------------------------**/
+
+/**------Habilidad tecnicas------**/
+#habilidades h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+#habilidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-radius: 20px;
+    background: var(--color-font-card);
+}
+#habilidad:hover{
+    box-shadow: 0 0 10px 1px var(--color-text-primary);
+    transform: translateY(-20px);
+}
+#habilidad:hover .dot{
+    animation: animateDot 2s linear forwards;
+}
+.dot::before{
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-text-primary);
+    box-shadow: 0 0 8px 3px var(--color-text-primary);
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    transform: rotate(calc(3.6deg * var(--num)));
+}
+.icon{
+    margin-top: 10px;
+    margin-bottom: -25px;
+}
+.porcentaje:hover{
+    cursor: pointer;
+}
+.porcentaje{
+    position: relative;
+    border-radius: 50%;
+}
+.porcentaje svg{
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.porcentaje svg circle{
+    fill: transparent;
+    stroke-width: 1.5;
+    transform: translate(5px,5px);
+}
+.porcentaje svg circle:nth-child(2){
+    stroke: var(--color-text-primary);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+}
+.porcentaje .icon svg{
+    width: 23px;
+    height: 23px;
+    margin-top: -5px;
+    transform: rotate(400grad);
+    color: var(--color-text-primary);
+}
+
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+}
+.numero h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2em;
+    margin-top: 33px;
+}
+.numero h2 span{
+    font-weight: 300;
+    font-size: 0.7em;
+}
+.numero p{
+    margin-top: -5px;
+}
+.container-edit-habilidad .subicon-edit-habilidad{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding: 5px 0px;
+    background-color: var(--color-font-primary);
+}
+.container-edit-habilidad .subicon-edit-habilidad ion-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: var(--color-text-primary);
+}
+.container-edit-habilidad .subicon-edit-habilidad ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 3px var(--color-text-primary);
+}
+#habilidad .icon img{
+    width: 27px;
+    height: 27px;
+}
+#habilidad .icon ion-icon{
+    width: 23px;
+    height: 23px;
+    color: var(--color-text-primary);
+}
+@media (min-width : 390px){
+    #habilidad{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+@media (max-width : 390px){
+    #habilidad{
+        padding-top: 40px;
+        gap: 5px;
+    }
+    .container-edit-habilidad{
+        margin-bottom: 25px;
+    }
+    .porcentaje{
+        margin-bottom: 13px;
+    }
+}
+@media (min-width : 310px){
+    #habilidad{
+        padding-bottom: 35px;
+    }
+}
+/**---------------------**/
+/**-----------Edicion habilidad tecnica----------**/
+#add-habilidad-tecnica h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-habilidad-tecnica select{
+    border-radius: 6px;
+}
+#add-habilidad-tecnica select, #add-habilidad-tecnica option{
+    color: var(--color-text-select);
+    outline: none;
+}
+#add-habilidad-tecnica select:hover{
+    cursor: pointer;
+}
+#add-habilidad-tecnica ion-icon{
+    color: var(--color-text-primary);
+}
+/**----------------------------------------------**/
+
+/**-------Encabezado de habilidades blandas------**/
+.blandas .descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.name-blanda{
+    width: 90%;
+    color: var(--color-sub-title-habilidades-adicionales);
+}
+.logo-blanda{
+    width: 10%;
+    text-align: end;
+}
+.logo-blanda ion-icon{
+    margin-top:-1.5px;
+    margin-bottom: -7px;
+    margin-right: -1.5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.blandas .descripcion:hover .logo-blanda ion-icon{
+    box-shadow: 0 0 15px 2px var(--color-text-primary);
+}
+.blandas .descripcion:hover .name-blanda{
+    color: var(--color-text-primary);
+}
+/**--------------------------------**/
+
+/**-------Encabezado de habilidades de gestion de proyectos y control de versiones------**/
+.gestion .descripcion, .control-de-versiones .descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.name-gestion, .name-version{
+    width: 90%;
+    text-align: end;
+    color: var(--color-sub-title-habilidades-adicionales);
+}
+.logo-gestion, .logo-version{
+    width: 10%;
+    text-align: start;
+}
+.logo-gestion ion-icon, .logo-version ion-icon{
+    margin-top:-1.5px;
+    margin-bottom: -7px;
+    margin-left: -1.5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.gestion .descripcion:hover .logo-gestion ion-icon, .control-de-versiones .descripcion:hover .logo-version ion-icon{
+    box-shadow: 0 0 15px 2px var(--color-text-primary);
+}
+.gestion .descripcion:hover .name-gestion, .control-de-versiones .descripcion:hover .name-version{
+    color: var(--color-text-primary);
+}
+/**--------------------------------**/
+
+/**------Habilidades adicionales------**/
+#habilidad-adicional{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    width: 93%;
+    border-radius: 20px;
+    background-color: var(--color-font-card);
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    padding: 20px 20px;
+}
+.blandas, .mas-habilidades{
+    width: 50%;
+}
+.control-de-versiones{
+    margin-top: 50px;
+}
+#habilidades-adicionales h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+#habilidad-adicional:hover{
+    cursor: pointer;
+    transform: translateY(-20px);
+    box-shadow: 0 0 10px 1px var(--color-text-primary);
+}
+#habilidad-adicional:hover .bar .progress-line span {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+#habilidad-adicional .bar .progress-line{
+    position: relative;
+    height: 10px;
+    background: var(--color-font-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress-line{
+    margin-top: -10px;
+}
+.progress-line span{
+    width: var(--porcentaje);
+}
+.descripcion-skill{
+    display: flex;
+    justify-content: start center;
+}
+.descripcion-skill ion-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    color: var(--color-text-primary);
+}
+.descripcion-skill p{
+    margin-left: 7px;
+    margin-top: 2px;
+}
+.bar .progress-line span{
+    position: absolute;
+    background: var(--color-text-primary);
+    border-radius: 20px;
+}
+@keyframes animate{
+    100%{
+        transform: scale(1);
+    }
+}
+@media (max-width : 700px){
+    #habilidad-adicional{
+        display: block;
+    }
+    .blandas, .mas-habilidades{
+        width: auto;
+    }
+    .gestion,.control-de-versiones{
+        margin-top: 30px;
+    }
+}
+@media (max-width : 400px){
+    #habilidad-adicional{
+        padding: 17px 8px;
+    }
+}
+@media (max-width : 365px){
+    .descripcion-skill p{
+        margin-left: 4px;
+    }
+}
+/**-----------------------------**/
+/**---------Edicion habilidad adicional---------**/
+#add-habilidad-adicional h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-habilidad-adicional select{
+    border-radius: 6px;
+}
+#add-habilidad-adicional select, #add-habilidad-adicional option{
+    color: var(--color-text-select);
+    outline: none;
+}
+#add-habilidad-adicional select:hover{
+    cursor: pointer;
+}
+.descripcion-skill p{
+    width: 100%;
+}
+.icons-skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -12px;
+    gap: 5px;
+    max-width: 48px;
+    min-width: 48px;
+    text-align: end;
+}
+.icons-skill ion-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+.icons-skill ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 3px var(--color-text-primary);
+}
+#add-habilidad-adicional ion-icon{
+    color: var(--color-text-primary);
+}
+/**---------------------------------------------**/
+
+/**------------Proyecto------------**/
+.swiper {
+    width: 750px;
+    height: 400px;
+    border-radius: 10px;
+}
+.presentacion-proyecto{
+    width: 90%;
+    color: var(--color-text-quaternary);
+}
+#proyectos h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+.section-proyecto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.link ion-icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+}
+.link ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px var(--color-text-primary);
+}
+.card{
+    background: transparent;
+    position: relative;
+    width: 65%;
+    height: 400px;
+    margin: 0px 5px 15px 5px;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front{
+    display: flex;
+    justify-content: center;
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 0 10px 0 var(--color-text-primary);
+}
+.card .front .img-card-proyecto{
+    position: absolute;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+}
+.card .front .text-card-proyecto{
+    position: absolute;
+    align-self: center;
+    width: 220px;
+    border-radius: 5px;
+    color: var(--color-font-card);
+    background: var(--color-text-primary);
+    text-align: center;
+    box-shadow: 0 0 15px 0 var(--color-text-primary);
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    border: 1px solid var(--color-text-primary);
+}
+.card .back .link{
+    border-top: solid 1px  var(--color-text-primary);
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    height: 40px;
+    line-height: 50px;
+    margin-top: -10px;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+.card .back p{
+    letter-spacing: 1px;
+} 
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+@media (max-width : 400px){
+    .swiper{
+        height: 490px;
+    }
+    .card .back h3{
+        font-size: 23px;
+    }
+}
+@media (max-width : 370px){
+    .swiper{
+        height: 500px;
+    }
+}
+@media (max-width : 350px){
+    .swiper{
+        height: 510px;
+    }
+}
+@media (max-width : 321px){
+    .swiper{
+        height: 520px;
+    }
+}
+/**----------------------------------**/
+
+/**---------Edicion proyecto---------**/
+#add-proyecto h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-tecnologia h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+.lista-tecnologia{
+    height: 300px;
+	overflow-y: scroll;
+    scrollbar-color: var(--color-text-primary);;
+}
+.lista-tecnologia::-webkit-scrollbar{
+    width: 7px;
+}
+.lista-tecnologia::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.sublista-tecnologia{
+    overflow-y: scroll;
+    scrollbar-color: var(--color-text-primary);;
+    height: 120px;
+}
+.sublista-tecnologia::-webkit-scrollbar{
+    width: 7px;
+}
+.sublista-tecnologia::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.items-tecnologia{
+    padding-right: 5px;
+    height: auto;
+}
+.name-item-tecnologia{
+    width: 90%;
+}
+.logo-item-tecnologia{
+    width: 10%;
+}
+.logo-item-tecnologia ion-icon{
+    width: 30px;
+    height: 30px;
+}
+.icon-add-tecnologia ion-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.icon-add-tecnologia ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px var(--color-text-primary);
+}
+.item-delete-tecnologia ion-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+.item-delete-tecnologia ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px var(--color-text-primary);
+}
+.item-delete-tecnologia{
+    display: flex;
+    border-bottom: 2px solid var(--color-text-primary);
+}
+/**----------------------------------**/
+
+/**------------Pasatiempos-----------**/
+.section-pasatiempo h4, #pasatiempos h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 2px;
+}
+.section-pasatiempo p, .pasatiempos-contain div{
+    color: var(--color-text-quaternary);
+}
+.pasatiempos-contain{
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pasatiempos-contain svg{
+    width: 55px;
+    height: 55px;
+    margin-bottom: 25px;
+    color: var(--color-text-primary);
+}
+.section-start, .section-center, .section-end{
+    border: 1px solid var(--color-sub-title-habilidades-adicionales);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition-duration: 1s;
+    width: 32.7%;
+}
+.section-start:hover, .section-center:hover, .section-end:hover{
+    cursor: pointer;
+    box-shadow: 0 0 12px 0 var(--color-sub-title-habilidades-adicionales);
+    transform: translateY(-2px);
+}
+.subicon-edit-pasatiempo{
+    display: flex;
+    justify-content: flex-end;
+}
+.subicon-edit-pasatiempo ion-icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+.subicon-edit-pasatiempo ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 3px var(--color-text-primary);
+}
+@media (max-width : 1150px){
+    .section-start, .section-center, .section-end{
+        width: 32.5%;
+    }
+}
+@media (max-width : 885px){
+    .section-start, .section-center, .section-end{
+        width: 32.3%;
+    }
+}
+@media (max-width : 800px){
+    .pasatiempos-contain{
+        display: block;
+    }
+    .section-start, .section-center, .section-end{
+        width: 100%;
+        margin-bottom: 13px;
+    }
+}
+/**----------Edicion pasatiempos---------**/
+#add-pasatiempo select, #add-pasatiempo option{
+    color: var(--color-text-select);
+    outline: none;
+}
+#add-pasatiempo select{
+    border-radius: 6px;
+}
+#add-pasatiempo h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-pasatiempo button ion-icon{
+    color: var(--color-text-primary);
+}
+/**--------------------------------------**/
+
+/**----------------------------------**/
+
+/**---------------Themes-------------**/
+#theme{
+    display: flex;
+    gap:20px;
+}
+#theme ion-icon{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 0.1px solid var(--color-text-primary);
+}
+#theme ion-icon:hover{
+    cursor: pointer;
+}
+.theme-claro{
+    color: var(--color-theme-claro-active);
+}
+.theme-claro:hover{
+    cursor: pointer;
+    color: var(--color-theme-claro-hover-active);
+    box-shadow: 0 0 30px 2px var(--color-theme-claro-hover-active);
+}
+.theme-intermedio{
+    color: var(--color-theme-intermedio-active);
+}
+.theme-intermedio:hover{
+    cursor: pointer;
+    color: var(--color-theme-intermedio-hover-active);
+    box-shadow: 0 0 30px 2px var(--color-theme-intermedio-hover-active);
+}
+.theme-oscuro{
+    color: var(--color-theme-oscuro-active);
+}
+.theme-oscuro:hover{
+    cursor: pointer;
+    color: var(--color-theme-oscuro-hover-active);
+    box-shadow: 0 0 30px 2px var(--color-theme-oscuro-hover-active);
+}
+@media (max-width : 1100px){
+    #theme{
+        top: 100px;
+        right: 4px;
+        margin-bottom: 15px;
+    }
+    #theme ion-icon{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (max-width : 500px){
+    #theme{
+        top: 80px;
+        right: 3px;
+        margin-bottom: 10px;
+    }
+    #theme ion-icon{
+        width: 15px;
+        height: 15px;
+    }
+}
+/**----------------------------------**/
+
+/**------Redes sociales------**/
+#redes-sociales h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+#redes{
+    width: 0px;
+}
+#sociales{
+    width: 22px;
+    height: 22px;
+}
+#redes #sociales{
+    transition-duration: 450ms;
+}
+#redes #sociales:hover{
+    transition-timing-function: ease-in-out;
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+#m-oculto{
+    display: none;
+}
+@media (max-width : 1200px){
+    #redes{
+        margin-top: 30px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #redes h6{
+        display: none;
+    }
+    #m-oculto{
+        display: flex;
+        justify-content: center;
+        font-size: 27px;
+        margin-bottom: -25px;
+    }
+    #redes #sociales{
+        width: 35px;
+        height: 35px;
+    }
+    #redes a{
+        height: 60px;
+        margin: 0px 40px;
+    }
+}
+@media (max-width : 800px){
+    #m-oculto{
+        font-size: 20px;
+    }
+    #redes a{
+        margin: 0px 20px;
+    }
+}
+@media (max-width : 550px){
+    #redes{
+        margin-top: 20px;
+    }
+    #redes a{
+        height: 30px;
+        margin: 0px 10px;
+    }
+}
+@media (max-width : 510px){
+    #redes #sociales{
+        width: 30px;
+        height: 30px;
+    }
+    #redes a{
+        margin: 25px;
+    }
+}
+@media (max-width : 400px){
+    #m-oculto{
+        font-size: 15px;
+    }
+    #redes #sociales{
+        width: 25px;
+        height: 25px;
+    }
+    #redes a{
+        margin: 20px;
+    }
+}
+@media (max-width : 310px){
+    #m-oculto{
+        text-align: center;
+        font-size: 13px;
+    }
+}
+/**---------Edicion red social---------**/
+#add-red-social h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-red-social h1{
+    font-size: 20px;
+    letter-spacing: 3.1px;
+    font-family: var(--tipo-letra-modal-add-edit);
+}
+#add-red-social button ion-icon{
+    color: var(--color-text-primary);
+}
+.lista-red-social{
+    height: 300px;
+	overflow-y: scroll;
+    scrollbar-color: var(--color-text-primary);;
+}
+.lista-red-social::-webkit-scrollbar{
+    width: 7px;
+}
+.lista-red-social::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.sublista-red-social{
+    overflow-y: scroll;
+    scrollbar-color: var(--color-text-primary);;
+    height: 120px;
+}
+.sublista-red-social::-webkit-scrollbar{
+    width: 7px;
+}
+.sublista-red-social::-webkit-scrollbar-thumb{
+    background: var(--color-text-primary);
+    border-radius: 30px;
+}
+.items-red-social{
+    padding-right: 5px;
+    height: auto;
+}
+.name-item-red-social{
+    width: 90%;
+}
+.logo-item-red-social{
+    width: 10%;
+}
+.logo-item-red-social ion-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: var(--color-text-primary);
+}
+.logo-item-red-social ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px var(--color-text-primary);
+}
+.icon-add-red-social ion-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.icon-add-red-social ion-icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px var(--color-text-primary);
+}
+.item-delete-red-social{
+    display: flex;
+    border-bottom: 2px solid var(--color-text-primary);
+}
+@media (max-width:400px){
+    .sublista-red-social{
+        height: 90px;
+    }
+}
+/**----------------------------------**/
+/**--------------------------**/
+
+/**------Footer------**/
+#final{
+    width: 95.4%;
+}
+#final h4{
+    font-family: var(--tipo-letra-bold);
+    letter-spacing: 1.5px;
+}
+.select-final{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-font-primary);
+    border:none;
+}
+.select-final:hover{
+    cursor: default;
+}
+.select-final ion-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+.select-final h4{
+    padding-top: 9px;
+    width: 100%;
+    text-align: end;
+}
+@media (max-width : 400px){
+    .select-final ion-icon{
+        width: 30px;
+        height: 30px;
+    }
+}
+#final h1{
+    font-size: 57px;
+    color: var(--color-text-tertiary);
+}
+#final p{
+    max-width: 470px;
+    color: var(--color-text-quaternary);
+}
+#final div a{
+    text-decoration: none;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+#final div a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    box-shadow: 0 0 15px 0 var(--color-text-primary);
+}
+#contacto{
+    max-width: 500px;
+}
+#contacto label{
+    transition-duration: 3s;
+}
+#contacto button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#contacto button ion-icon{
+    width: 18px;
+    height: 18px;
+}
+#contacto button:hover{
+    box-shadow: 0 0 30px 0 var(--color-text-primary);
+}
+#mensaje{
+    background: transparent;
+    box-shadow: 0 5px 5px 0 var(--color-text-primary);
+    border-radius: 5px;
+    max-width: 250px;
+    min-width: 250px;
+}
+#f-nombre,#f-email,#f-mensaje,#f-asunto{
+    display: flex;
+    flex-direction: column;
+}
+#f-nombre input, #f-email input, #f-asunto input,#f-mensaje textarea{
+    order: 2;
+}
+#f-nombre label, #f-email label,#f-mensaje label,#f-asunto label{
+    order: 1;
+    border-radius: 6px;
+}
+#f-nombre input:hover + label, #f-email input:hover + label, #f-asunto input:hover + label, #f-mensaje textarea:hover + label{
+    box-shadow: 0 0 13px 0 var(--color-text-primary);
+    transition-duration: 3s;
+    max-width: none;
+    text-align: center;
+}
+.data{
+    padding: 5px 12px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.data h6{
+    margin-left: 10px;
+    padding-top:8px;
+    transition-duration: 500ms;
+    color: var(--color-text-quaternary);
+    text-align: center;
+}
+.data h6:hover{
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+.data img:hover{
+    box-shadow: 0px 0px 15px 2px var(--color-text-primary);
+}
+.data img{
+    text-align: center;
+    width: 17px;
+    height: 17px;
+    border: 1px;
+    border-radius: 50%;
+}
+@media (max-width : 750px){
+    #final h1{
+        font-size: 50px;
+    }
+}
+@media (max-width : 670px){
+    #final h1{
+        font-size: 45px;
+    }
+}
+@media (max-width : 550px){
+    #contacto{
+        max-width: 450px;
+    }
+}
+@media (max-width : 460px){
+    #contacto{
+        max-width: 400px;
+    }
+}
+/**------------------**/
+
+/**-------Curso------**/
+.curso{
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curso .icon-curso ion-icon{
+    width: 45px;
+    height: 45px;
+    color: white;
+}
+.curso .title-curso{
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    margin-bottom: 4px;
+}
+.info-curso{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+/**------------------**/

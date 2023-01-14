@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/png"/>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
+    <title>Nicolas Beltran</title>
+</head>
+<body>
+    <!----------------Header y nav--------------->
+    <header class="fixed-top w-100" id="inicio">
+        <i data-aos="fade-left" data-aos-duration="1300" class='btn-menu bx bx-menu-alt-right bx-lg'></i>
+        <nav class="menu-navegacion">
+            <p class="header-menu border-bottom border-info text-center fw-semibold">Menu principal</p>
+            <div class="" id="items">
+                <ul class="navbar-nav">
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#presentacion">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Sobre mi
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="newspaper-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#perfil">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Perfil
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="person-circle-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#educacion">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Educacion
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#experiencia-laboral">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Experiencia
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="briefcase-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#habilidades">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Habilidades
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="pulse-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#proyectos">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Proyectos
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="code-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item fw-semibold">
+                        <a class="item fs-6 mx-1 py-1 px-3" href="#final">
+                            <div class="name-item text-start py-1 rounded-5">
+                                Contacto
+                            </div>
+                            <div class="logo-item mx-1 rounded-5">
+                                <ion-icon name="mail-unread-outline"></ion-icon>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="footer-menu border-top border-info text-center">Beltran Ricardo Nicolas Alejo</p>
+        </nav>
+        <a id="logo-header" href="./pages/login.html">
+            <img data-aos="fade-right" data-aos-duration="1300" src="./favicon.ico" alt="Logo" class="rounded-circle" id="logo-menu">
+        </a>
+    </header>
+
+    <!-----------Presentacion---------->
+    <section id="presentacion" class="mx-auto text-start mb-5 mt-1 pb-5 pt-3 px-4">
+
+        <!--------------Theme-------------->
+        <section data-aos="fade-up" data-aos-duration="2000" class="mb-1 pt-5 mt-5" id="theme">
+            <ion-icon onclick="change_theme_claro()" class="theme-claro" name="contrast-outline"></ion-icon>
+            <ion-icon onclick="change_theme_intermedio()" class="theme-intermedio" name="contrast-outline"></ion-icon>
+            <ion-icon onclick="change_theme_oscuro()" class="theme-oscuro" name="contrast-outline"></ion-icon>
+        </section>
+        <!--------------------------------->
+
+        <h4 data-aos="fade-right" data-aos-duration="1300" id="saludo" class="mb-4">Hola, mi nombre es</h4>
+        <h1 data-aos="fade-right" data-aos-duration="1600" id="nombre" class="mb-4">Beltran Ricardo Nicolas Alejo</h1>
+        <h2 data-aos="fade-right" data-aos-duration="1900" id="profesion" class="mb-5">Programador Web Full Stack</h2>
+        <h4 data-aos="fade-right" data-aos-duration="2200" id="info" class="mb-3">
+            Hola mi nombre es Alejo y me apasiona crear aplicaciones ya sean para la web o aplicaciones deskatop. Mi interes en la programacion surgio cuando comence una carrera universitaria donde pude adentrarme a este mundo tan increible donde dejas que tu imaginacion te diga como programar.
+        </h4>
+    </section>
+    <section id="perfil" class="container text-center my-4 py-5 px-3">
+        <img data-aos="fade-up" data-aos-duration="3000" src="./public/images/perfil.jpg" alt="Mi perfil" class="mt-5 mb-3 rounded-circle">
+    </section>
+    <section data-aos="fade-up" data-aos-duration="2000" id="descripcion" class="text-start mx-auto py-5 mb-5 px-4">
+        <h4 id="sobre-mi" data-aos="fade-right" data-aos-duration="3000" class="mb-3 pb-2 border-bottom border-primary">Sobre mi</h4>
+        <p data-aos="fade-left" data-aos-duration="1300" id="direccion" class="mb-3 text-end">Simoca - Tucumán (Argentina)</p>
+        <p data-aos="fade-right" data-aos-duration="1600" class="mb-4">Algunas de mis reglas al momento de realizar cualquier tipo de sistema es tener muy en cuenta el rendimiento la escalabilidad y la personalizacion entre otros parametros que influyen en la optencion de un sistema de calidad. La calidad esta en el detalle.</p>
+        <p data-aos="fade-right" data-aos-duration="1900" class="mb-4">Aqui hay algunas de las tecnologias con las que he estado trabajando recientemente:</p>
+        <div data-aos="fade-left" data-aos-duration="2200" class="tecnologias-actuales">
+            <div class="lista-start">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>MySQL</li>
+            </div>
+            <div class="lista-end">
+                <li>MongoDB</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
+            </div>
+        </div>
+    </section>
+    <!-----------Educacion---------->
+    <section data-aos="fade-right" data-aos-duration="3000" id="educacion" class="mx-auto text-start py-5 px-3">
+        <h4 class="border-bottom border-primary pb-2 text-end mt-5 mb-1">Educacion</h4>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="3000" class="section-educacion mx-auto text-start pb-5 px-3">
+        <article data-aos="fade-up" data-aos-duration="3000" class="data-educacion py-4">
+            <div class="logo-educacion text-center my-auto">
+                <img class="img-educacion mt-0 rounded-3" src="./public/images/Escuela_media.jpg" alt="Imagen educacion escuela media">
+            </div>
+            <div class="info-educacion px-3 my-auto">
+                <p class="name-institucion fw-semibold">
+                    Institucion Escuela Media de la Tuna
+                </p>
+                <p class="card-text my-2">
+                    Carrera : Produccion de bienes y servicios
+                </p>
+                <p class="card-text my-2">
+                    Tiempo transurrido desde 2011-03-05 hasta 2017-12-20
+                </p>
+                <p>
+                    Bachillerato
+                </p>
+            </div>
+        </article>
+        <article data-aos="fade-up" data-aos-duration="3000" class="data-educacion py-4">
+            <div class="logo-educacion text-center my-auto">
+                <img class="img-educacion mt-0 rounded-3" src="./public/images/Logo_utn.jpg" alt="Imagen educacion utn">
+            </div>
+            <div class="info-educacion px-3 my-auto">
+                <p class="name-institucion fw-semibold">
+                    Institucion Universidad Tecnologia Nacional (UTN)
+                </p>
+                <p class="card-text my-2">
+                    Carrera : Ingenieria en sistemas de informacion
+                </p>
+                <p class="card-text my-2">
+                    Tiempo transurrido desde 2018-03-01 hasta Actualmente
+                </p>
+                <p>
+                    Estudiante avanzado y becario, en diferentes ocaciones he ofrecido mi ayuda a chicos que tenian problemas en la programacion.
+                </p>
+            </div>
+        </article>
+    </section>
+    <!-----------Experiencia---------->
+    <section data-aos="fade-right" data-aos-duration="3000" id="experiencia-laboral" class="mx-auto text-start py-5 px-3">
+        <h4 class="border-bottom border-primary pb-2 text-end mt-5 mb-1">Experiencia</h4>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="3000" class="section-experiencia mx-auto text-start pb-5 px-3">
+        <article data-aos="fade-up" data-aos-duration="3000" class="data-experiencia py-4">
+            <div class="logo-experiencia text-center my-auto">
+                <img class="img-experiencia mt-0 rounded-3" src="./public/images/Logo-bremen.png" alt="Imagen experiencia laboral bremen">
+            </div>
+            <div class="info-experiencia px-3 my-auto">
+                <p class="name-institucion fw-semibold">
+                    Ferreteria Bremen
+                </p>
+                <p class="card-text my-2">
+                    Puesto : Empleado de mantenimiento del sistema
+                </p>
+                <p class="card-text my-2">
+                    Tiempo transurrido desde 2019-06-12 hasta 2021-11-23
+                </p>
+                <p class="card-text my-2">
+                    Descripcion : Trabaje usando el lenguaje de programacion Java y una base de datos MySql, para la administracion de la base de datos se uso Worbench y para la parte de Java se uso el IDE Apache NetBeans.
+                </p>
+            </div>
+        </article>
+        <article data-aos="fade-up" data-aos-duration="3000" class="data-experiencia py-4">
+            <div class="logo-experiencia text-center my-auto">
+                <img class="img-experiencia mt-0 rounded-3" src="./public/images/Logo-inspeccionar_de_calzados.webp" alt="Imagen experiencia laboral empresa de calzados">
+            </div>
+            <div class="info-experiencia px-3 my-auto">
+                <p class="name-institucion fw-semibold">
+                    Empresa de control de calidad de calzados
+                </p>
+                <p class="card-text my-2">
+                    Puesto : Programador de logistica
+                </p>
+                <p class="card-text my-2">
+                    Tiempo transurrido desde 2022-01-11 hasta 2022-12-10
+                </p>
+                <p class="card-text my-2">
+                    Trabaje usando tecnologias como HTML5 con el motor de plantillas handlebars, CSS3 con el Framework Tailwind y JavaScript con el Framework Express.js.
+                </p>
+            </div>
+        </article>
+    </section>
+    <!-----------Habilidades tecnicas---------->
+    <section data-aos="fade-right" data-aos-duration="3000" id="habilidades" class="mx-auto text-start py-5 px-3">
+        <h4 class="border-bottom border-primary pb-2 text-end mt-5 mb-1">Habilidades tecnicas</h4>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="3000" id="habilidad" class="items-habilidad-tecnica mx-auto text-center">
+        <div class="porcentaje" style="--num:80">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-html5"></ion-icon>
+                </div>
+                <h2>80<span>%</span></h2>
+                <p>HTML5</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:75">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-css3"></ion-icon>
+                </div>
+                <h2>75<span>%</span></h2>
+                <p>CSS3</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:70">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-javascript"></ion-icon>
+                </div>
+                <h2>70<span>%</span></h2>
+                <p>JavaScript</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:85">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-typescript bx-sm'></i>
+                </div>
+                <h2>85<span>%</span></h2>
+                <p>TypeScript</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:90">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-java bx-md'></i>
+                </div>
+                <h2>90<span>%</span></h2>
+                <p>Java</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:80">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-php bx-md'></i>
+                </div>
+                <h2>80<span>%</span></h2>
+                <p>PHP</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:60">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-c-plus-plus bx-md'></i>
+                </div>
+                <h2>60<span>%</span></h2>
+                <p>C++</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:95">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <img id="mysql" src="./public/icons/mysql_3.png" alt="Logo mysql">
+                </div>
+                <h2>95<span>%</span></h2>
+                <p>MySQL</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:55">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-mongodb bx-sm'></i>
+                </div>
+                <h2>55<span>%</span></h2>
+                <p>MongoDB</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:45">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="infinite-outline"></ion-icon>
+                </div>
+                <h2>45<span>%</span></h2>
+                <p>Arduino</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:45">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-python"></ion-icon>
+                </div>
+                <h2>45<span>%</span></h2>
+                <p>Python</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:80">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-npm"></ion-icon>
+                </div>
+                <h2>80<span>%</span></h2>
+                <p>npm</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:80">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-react"></ion-icon>
+                </div>
+                <h2>80<span>%</span></h2>
+                <p>React</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:70">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16"><path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/><path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/></svg>
+                </div>
+                <h2>70<span>%</span></h2>
+                <p>Bootstrap</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:70">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <i class='bx bxl-tailwind-css bx-md'></i>
+                </div>
+                <h2>70<span>%</span></h2>
+                <p>Tailwind</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:75">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <img id="next" src="./public/icons/next_3.png" alt="Logo next.js">
+                </div>
+                <h2>75<span>%</span></h2>
+                <p>Next.js</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:70">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-angular"></ion-icon>
+                </div>
+                <h2>70<span>%</span></h2>
+                <p>Angular</p>
+            </div>
+        </div>
+        <div class="porcentaje" style="--num:80">
+            <div class="dot"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+            </svg>
+            <div class="numero">
+                <div class="icon">
+                    <ion-icon name="logo-nodejs"></ion-icon>
+                </div>
+                <h2>80<span>%</span></h2>
+                <p>Node.js</p>
+            </div>
+        </div>
+    </section>
+    <!-----------Habilidades adicionales---------->
+    <section data-aos="fade-up" data-aos-duration="3000" id="habilidades-adicionales" class="mx-auto text-end py-5 px-3">
+        <h4 data-aos="fade-right" data-aos-duration="3000" class="mt-5 pb-2 border-bottom border-primary">Mas habilidades</h4>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="3000" id="habilidad-adicional" class="mx-auto">
+        <article class="blandas">
+            <div class="descripcion fw-semibold border border-primary mb-4">
+                <div class="name-blanda">Blandas</div>
+                <div class="logo-blanda">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="bulb-outline"></ion-icon>
+                    </div>
+                    <p>Creatividad</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:90%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="happy-outline"></ion-icon>
+                    </div>
+                    <p>Pensamiento crítico</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:75%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="extension-puzzle-outline"></ion-icon>
+                    </div>
+                    <p>Resolver problemas</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:80%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                    <p>Trabajo en equipo</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:70%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                    <p>Comunicación</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:100%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                    </div>
+                    <p>Fuerza de voluntad</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:100%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="desktop-outline"></ion-icon>
+                    </div>
+                    <p>Autodidacta</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:100%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="thumbs-up-outline"></ion-icon>
+                    </div>
+                    <p>Sociabilidad</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:100%"></span>
+                </div>
+            </div>
+            <div class="bar mb-3">
+                <div class="descripcion-skill">
+                    <div class="">
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <p>Inteligencia emocional</p>
+                </div>
+                <div class="progress-line rounded-4">
+                    <span class="h-100" style="--porcentaje:85%"></span>
+                </div>
+            </div>
+        </article>
+        <article class="mas-habilidades">
+            <div class="gestion">
+                <div class="descripcion fw-semibold border border-primary mb-4">
+                    <div class="logo-gestion">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </div>
+                    <div class="name-gestion">Gestion de proyectos</div>
+                </div>
+                <div class="bar mb-3">
+                    <div class="descripcion-skill">
+                        <div class="">
+                            <ion-icon name="reader-outline"></ion-icon>
+                        </div>
+                        <p>Jira</p>
+                    </div>
+                    <div class="progress-line rounded-4">
+                        <span class="h-100" style="--porcentaje:90%"></span>
+                    </div>
+                </div>
+                <div class="bar mb-3">
+                    <div class="descripcion-skill">
+                        <div class="">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                        </div>
+                        <p>Trello</p>
+                    </div>
+                    <div class="progress-line rounded-4">
+                        <span class="h-100" style="--porcentaje:90%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-de-versiones">
+                <div class="descripcion fw-semibold border border-primary mb-4">
+                    <div class="logo-version">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </div>
+                    <div class="name-version">Control de versiones</div>
+                </div>
+                <div class="bar mb-3">
+                    <div class="descripcion-skill">
+                        <div class="">
+                            <ion-icon name="git-merge-outline"></ion-icon>
+                        </div>
+                        <p>Git</p>
+                    </div>
+                    <div class="progress-line rounded-4">
+                        <span class="h-100" style="--porcentaje:90%"></span>
+                    </div>
+                </div>
+                <div class="bar mb-3">
+                    <div class="descripcion-skill">
+                        <div class="">
+                            <ion-icon name="git-merge-outline"></ion-icon>
+                        </div>
+                        <p>GitHub</p>
+                    </div>
+                    <div class="progress-line rounded-4">
+                        <span class="h-100" style="--porcentaje:90%"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-----------Proyectos---------->
+    <section data-aos="fade-right" data-aos-duration="3000" id="proyectos" class="mx-auto text-start py-5 px-3">
+        <h4 class="border-bottom border-primary pb-2 text-end mt-5 mb-1">Proyectos</h4>
+    </section>
+    <p data-aos="fade-up" data-aos-duration="3000" class="presentacion-proyecto mx-auto mb-5">A continuacion algunos proyectos que he realizado, en todos ellos siempre tuve presente que un entorno de trabajo bien personalizado es fundamental para un desarrollo productivo y eficiente.</p>
+    <section data-aos="fade-up" data-aos-duration="3000" class="section-proyecto mx-auto mb-5">
+        <div class="swiper mySwiper-proyecto mb-5">
+            <div class="swiper-wrapper">
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto" src="./public/images/Control_de_calidad.png" alt="Imagen de proyecto control de calidad">
+                        <p class="text-card-proyecto fw-bold">Calidad calzados</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Calidad calzados</h3>
+                        <p>App web, fabrica de sapatillas con lineas de produccion donde se crean ordenes de produccion con un modelo y color las lineas tienen supervisores de linea y de calidad para que estos realizar el control de calidad de los calzados y notifiquen incidencias en los pares.</p>
+                        <p>Tecnologias : JavaScript, Mysql, CSS3, HTML5, Tailwind, HandleBards</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Parser.png" alt="Imagen de proyecto parser">
+                        <p class="text-card-proyecto fw-bold">Parser</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Parser</h3>
+                        <p>App de escritorio, GUI que cuenta con un analizador lexico y sintactico y una seccion donde podemos ingresar una consulta sql, luego de ejecutar el sistema nos devolvela el analisis del analizador lexico y sintactico seguido de un mansaje de si nuestra consulta es valida.</p>
+                        <p>Tecnologias : Java, java-cup, java-cup-11a, Jflex</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Clasical_model.png" alt="Imagen de proyecto clasical model">
+                        <p class="text-card-proyecto fw-bold">Clasical model</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Clasical model</h3>
+                        <p>App de escritorio, consiste en la administracion de una empresa que cuenta con pedidos de productos, y toda la administracion de las oficinas de la empresa.</p>
+                        <p>Tecnologias : Java, Mysql</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Juego_pong.png" alt="Imagen de proyecto juego pong">
+                        <p class="text-card-proyecto fw-bold">Juego pong</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Juego pong</h3>
+                        <p>App de escritorio, tablero con 7 let 2 botones en cada extremo, las luces se encienden con un color azul hasta llegar al extremo y el ultimo let se mantiene en color verde durante un 1s hasta que el jugador presione el boton, si el jugador no presiona el boton antes de tiempo el let cambia a rojo.</p>
+                        <p>Tecnologias : Arduino</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Analizador_lexico.png" alt="Imagen de proyecto analizador lexico">
+                        <p class="text-card-proyecto fw-bold">Analizador lexico</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Analizador lexico</h3>
+                        <p>App de escritorio, na de las soluciones fue usando grafos y la otra fue usando solo codigo basico, consiste en ingresar o seleccionar un archivo con una porcion de codigo, y al ejecutarlo nos devolvera una lista indicando los tokens.</p>
+                        <p>Tecnologias : C, C++</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Editorial_de_libros.png" alt="Imagen de proyecto editorial de libros">
+                        <p class="text-card-proyecto fw-bold">Editorial de libros</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Editorial de libros</h3>
+                        <p>App de escritorio, consiste en la administracion de una editorial de libros, que ademas implementa la validacion y uso de ISBNS. Y administracion de libros con su autores correspondientes.</p>
+                        <p>Tecnologias : C, C++</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Control_de_calidad_next.png" alt="Imagen de proyecto control de calidad">
+                        <p class="text-card-proyecto fw-bold">Fabrica</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Fabrica</h3>
+                        <p>App web, consiste en la administracion de una fabrica de zapatillas.</p>
+                        <p>Tecnologias : Next.js, Axios, TypeScript, Mysql, Tailwind, CSS3, HTML5</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Formulario_de_preguntas.png" alt="Imagen de proyecto formulario de preguntas">
+                        <p class="text-card-proyecto fw-bold">Quiz de preguntas</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Quiz de preguntas</h3>
+                        <p>App web, consiste en un formulario de preguntas multiusuario. Las cuales se incrementan progresivamente.</p>
+                        <p>Tecnologias : React, Axios, Mysql, CSS3, HTML5</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Bremen.png" alt="Imagen de proyecto bremen">
+                        <p class="text-card-proyecto fw-bold">Bremen</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Bremen</h3>
+                        <p>App de escritorio, esta enfocado en la administracion de una ferreteria que cuenta con recursos humanos, compras, ventas, y pago de sueldos, tambien nos presenta todo tipo de reportes.</p>
+                        <p>Tecnologias : Java, Mysql</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Pinterest.png" alt="Imagen de proyecto pinterest">
+                        <p class="text-card-proyecto fw-bold">Pinterest</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Pinterest</h3>
+                        <p>App web en donde se puede realizar la gestion de imagenes al estilo pinterest y algun otro detalle que yo agregue.</p>
+                        <p>Tecnologias : JavaScript, Express.js, MongoDB, EJS, HandleBards, Bootstrap, CSS3, HTML5</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/portafolio_v1.png" alt="Imagen de proyecto portafolio v1">
+                        <p class="text-card-proyecto fw-bold">Portafolio V1.0</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">Portafolio V1.0</h3>
+                        <p>App web, esta fue uno de los portafolios que deje a mitad de camino, en otras palabras seria la primera version de mi portafolio.</p>
+                        <p>Tecnologias : JavaScript, CSS3, HTML5</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card swiper-slide">
+                    <div class="face front">
+                        <img class="img-card-proyecto"  src="./public/images/Administracion_de_usuarios.png" alt="Imagen de proyecto administracion de usuarios">
+                        <p class="text-card-proyecto fw-bold">ABM usuarios</p> 
+                    </div>
+                    <div class="face back">
+                        <h3 class="fw-bold">ABM usuarios</h3>
+                        <p>App web de administracion de usuarios, con seguridad para evitar ataques como XSS, CSRF, SQL INJECTION, CODE INJECTION, BRUTE FORCE ROBOTS tambien incluye SSL y el archivo .htaccess</p>
+                        <p>Tecnologias : PHP, Mysql, PDO, crypt, CSS3, HTML5</p>
+                        <div class="link">
+                            <a href="https://github.com/" class="mx-2">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-----------Pasatiempos---------->  
+    <section data-aos="fade-up" data-aos-duration="3000" id="pasatiempos" class="section-pasatiempo text-start mx-auto py-5 mb-3 px-4">
+        <h4 data-aos="fade-right" data-aos-duration="3000" class="text-center mb-3 pb-2 border-bottom border-primary">Pasatiempos</h4>
+        <p data-aos="fade-left" data-aos-duration="3000" class="mb-4">Aqui hay algunas cosas que me gustan hacer aparte de la programacion:</p>
+        <article data-aos="fade-up" data-aos-duration="3000" class="pasatiempos-contain">
+            <div class="section-start">
+                <div class="image-deporte">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-8-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5.03 1.803c0-1.248-.943-1.84-1.646-1.992v-.065c.598-.187 1.336-.72 1.336-1.781 0-1.225-1.084-2.121-2.654-2.121-1.57 0-2.66.896-2.66 2.12 0 1.044.709 1.589 1.33 1.782v.065c-.697.152-1.647.732-1.647 2.003 0 1.39 1.19 2.344 2.953 2.344 1.77 0 2.989-.96 2.989-2.355Zm-4.347-3.71c0 .739.586 1.255 1.383 1.255s1.377-.516 1.377-1.254c0-.733-.58-1.23-1.377-1.23s-1.383.497-1.383 1.23Zm-.281 3.645c0 .838.72 1.412 1.664 1.412.943 0 1.658-.574 1.658-1.412 0-.843-.715-1.424-1.658-1.424-.944 0-1.664.58-1.664 1.424Z"/></svg>
+                </div>
+                <div class="info-deporte">
+                    He sido un deportista profesional, jugando Billar y Snooker, en un futuro me gustaria tambien jugar Bola 9.
+                </div>
+            </div>
+            <div class="section-center">
+                <div class="image-instrumento">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16"><path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/><path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/><path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/><path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/></svg>
+                </div>
+                <div class="info-instrumento">
+                    En mis ratos libres me gusta tocar guitarra y teclado.
+                </div>
+            </div>
+            <div class="section-end">
+                <div class="image-profesor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-incognito" viewBox="0 0 16 16"><path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205a1.032 1.032 0 0 0-.014-.058l-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5c-.62 0-1.411-.136-2.025-.267-.541-.115-1.093.2-1.239.735Zm.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a29.58 29.58 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274ZM3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Zm-1.5.5c0-.175.03-.344.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085c.055.156.085.325.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0v-1Zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Z"/></svg>
+                </div>
+                <div class="info-profesor">
+                    En ocaciones tambien me gusta ayudar a otros programadores que apenas estan iniciando en el mundo de la programacion.
+                </div>
+            </div>
+        </article>  
+    </section>
+    <!-----------Redes sociales---------->  
+    <h6 data-aos="fade-up" data-aos-duration="3000" id="m-oculto" class="mt-5 pt-5 fw-bold">Puedes comunicarte mediante</h6> 
+    <section data-aos="fade-up" data-aos-duration="2000" class="fixed-bottom" id="redes">
+        <a href="xxxxxxxxxxxxxxxxxxxxxxxxx">
+            <ion-icon class="row mx-2 my-4" id="sociales" name="mail-outline"></ion-icon>
+        </a>
+        <a href="yyyyyyyyyyyyyyyyyyyyyyyyy">
+            <ion-icon class="row mx-2 my-4" id="sociales" name="call-outline"></ion-icon>
+        </a>
+        <a href="ccccccccccccccccccccccccc">
+            <ion-icon class="row mx-2 my-4" id="sociales" name="logo-linkedin"></ion-icon>
+        </a>
+        <h6 class="row mx-3">-</h6>
+        <h6 class="row mx-3">-</h6>
+        <h6 class="row mx-3 mb-3">-</h6>
+    </section>
+    <!-----------Footer---------->  
+    <footer>
+        <section id="final" class="mx-auto text-center my-5 pt-5 pb-5 px-3">
+            <button class="select-final border-bottom border-primary mb-5" data-aos="fade-right" data-aos-duration="3000">
+                <ion-icon name="mail-open-outline"></ion-icon>
+                <h4>Paso final</h4>
+            </button>
+            <h1 data-aos="fade-down" data-aos-duration="3000" class="text-center fw-bold">Ponerse en contacto</h1>
+            <p data-aos="fade-down" data-aos-duration="3000" class="container mt-3 text-center">Mi bandeja siempre esta disponible, por si quieres hacer alguna pregunta o por si quieres saludar. ¡Tratare de responder lo antes posible!</p>
+            <div data-aos="fade-down" data-aos-duration="3000" class="mt-5 py-5">
+                <a href="#mensaje" class="py-4 px-5 rounded-2">Di hola</a>
+            </div>
+        </section>
+        <p data-aos="fade-left" data-aos-duration="3000" id="mensaje" class="container text-center pb-2 border-bottom">Dejame un mensaje</p>
+        <section data-aos="fade-up" data-aos-duration="3000" id="contacto" class="container text-center px-3 pt-5">
+            <article class="text-start rounded-3">
+                <form class="mx-auto">
+                    <div id="f-nombre" class="mb-4">
+                        <input data-aos="fade-left" data-aos-duration="3000" type="text" name="nombre" class="form-control bg-black text-white border-bottom border-primary" placeholder="Dime tu nombre..." id="exampleInputName">
+                        <label data-aos="fade-right" data-aos-duration="2000" for="exampleInputName" class="form-label">Nombre</label>
+                    </div>
+                    <div id="f-email" class="mb-4">
+                        <input data-aos="fade-left" data-aos-duration="3000" type="email" name="email" class="form-control bg-black text-white border-bottom border-primary" placeholder="Dime tu email..." id="exampleInputEmail">
+                        <label data-aos="fade-right" data-aos-duration="2000" for="exampleInputEmail" class="form-label">Email</label>
+                    </div>
+                    <div id="f-asunto" class="mb-4">
+                        <input data-aos="fade-left" data-aos-duration="3000" type="text" name="asunto" class="form-control bg-black text-white border-bottom border-primary" placeholder="Dime tu asunto..." id="exampleInputAsunto">
+                        <label data-aos="fade-right" data-aos-duration="2000" for="exampleInputAsunto" class="form-label">Asunto</label>
+                    </div>
+                    <div id="f-mensaje" class="md-form amber-textarea active-amber-textarea">
+                        <textarea data-aos="fade-left" data-aos-duration="3000" id="exampleInputMensaje" name="mensaje" class="md-textarea form-control bg-black text-white border border-primary" placeholder="Escribeme tu mensaje..."></textarea>
+                        <label data-aos="fade-right" data-aos-duration="2000" for="exampleInputMensaje" class="form-label">Mensaje</label>
+                    </div>
+                    <button data-aos="fade-up" data-aos-duration="2500" type="submit" class="mt-5 btn btn-primary bg-black w-100 rounded-1">
+                        <ion-icon name="navigate-outline"></ion-icon>
+                        Enviar mensaje
+                    </button>
+                </form>
+            </article>
+        </section>
+        <section data-aos="fade-right" data-aos-duration="2200" id="autor" class="container my-5 pt-5">
+            <div class="data">
+                <a href="#perfil">
+                    <img src="./public/images/perfil.jpg" alt="Imagen de perfil">
+                </a>
+                <a href="#presentacion">
+                    <h6>
+                        Diseñado y construido por Beltran Ricardo Nicolas Alejo
+                    </h6>
+                </a>
+            </div>
+        </section>
+        <section class="curso">
+            <div class="info-curso">
+                <div class="icon-curso">
+                    <ion-icon name="terminal"></ion-icon>
+                </div> 
+                <div class="title-curso">
+                    Argentina programa
+                </div>  
+            </div> 
+        </section>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./controllers/swiper_proyecto.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./controllers/theme.js"></script>
+    <script src="./controllers/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
